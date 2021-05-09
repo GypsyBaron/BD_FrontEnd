@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sveikata</string>
+    <string name="url">http://10.0.2.2:8080/</string>
+    <string name="CaloriesFormula"><![CDATA[Kalorijų kiekis turi atitikti formulę:\nKalorijos <= (Angliavandeniai + Baltymai) * 4 + Riebalai * 9]]></string>
+</resources>
