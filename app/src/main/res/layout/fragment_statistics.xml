@@ -62,5 +62,16 @@
         app:layout_constraintTop_toBottomOf="@+id/statistics_end"
         app:srcCompat="@drawable/graph" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/ButtonColor"
+        android:text="Atvaizduoti"
+        android:textColor="@color/ButtonText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statistics_end" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

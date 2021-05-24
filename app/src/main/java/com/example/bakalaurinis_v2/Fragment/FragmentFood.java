@@ -94,7 +94,6 @@ public class FragmentFood extends Fragment {
                 for (int j = 0; j < foodListView.getCount(); j++) {
                     foodListView.getChildAt(j).setBackgroundColor(Color.TRANSPARENT);
                 }
-                Toast.makeText(getContext(), "ID - "  + i, Toast.LENGTH_LONG).show();
                 foodListView.getChildAt(i).setBackgroundColor(getResources().getColor(R.color.ButtonColor));
             }
         });

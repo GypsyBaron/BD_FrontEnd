@@ -115,9 +115,9 @@ public class MainWindowActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem) {
-        Integer id = menuItem.getItemId();
+        Integer menuId = menuItem.getItemId();
         Intent intent;
-        switch (id) {
+        switch (menuId) {
             case R.id.nav_user:
                 intent = new Intent(this, AccountActivity.class);
                 intent.putExtra("id", id);

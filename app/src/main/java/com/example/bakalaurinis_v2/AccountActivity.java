@@ -1,7 +1,10 @@
 package com.example.bakalaurinis_v2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +16,7 @@ public class AccountActivity extends AppCompatActivity {
 
     private String id;
     private Spinner genderSpinner;
+    private Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,17 @@ public class AccountActivity extends AppCompatActivity {
 
         genderSpinner = findViewById(R.id.account_gender);
         setSpinnerValues();
+
+        backButton = findViewById(R.id.account_back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainWindowActivity.class);
+                intent.putExtra("id", id);
+                intent.putExtra("fragment", "home");
+                startActivity(intent);
+            }
+        });
     }
 
     private void setSpinnerValues() {
