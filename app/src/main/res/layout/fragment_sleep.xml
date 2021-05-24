@@ -22,11 +22,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:text="Žadintuvas"
         android:textSize="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,15 +73,6 @@
         app:layout_constraintStart_toEndOf="@+id/sleep_timePicker"
         app:layout_constraintTop_toBottomOf="@+id/sleep_melodies" />
 
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jeigu miegama mažiau nei 12h pasirinkti AM, jei daugiau - PM"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sleep_quality_timePicker" />
-
     <RatingBar
         android:id="@+id/sleep_rating_bar"
         android:layout_width="wrap_content"
@@ -92,9 +83,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+        app:layout_constraintTop_toBottomOf="@id/sleep_quality_timePicker" />
 
     <Button
+        android:id="@+id/save_sleep_record"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/ButtonColor"

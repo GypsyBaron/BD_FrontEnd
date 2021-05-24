@@ -25,6 +25,7 @@
         <activity android:name=".Recipe.RecipeWebActivity"/>
         <activity android:name=".Recipe.RecipeCreateActivity" />
         <activity android:name=".AccountActivity" />
+        <receiver android:name=".Sleep.SleepBroadcastReceiver"/>
     </application>
 
 </manifest>

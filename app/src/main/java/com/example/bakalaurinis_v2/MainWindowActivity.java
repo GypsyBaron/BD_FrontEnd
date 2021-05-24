@@ -23,6 +23,8 @@ public class MainWindowActivity extends AppCompatActivity {
 
     private String id;
     private String fragment;
+    private String clock;
+
     private Fragment selectedFragment;
 
     @Override
@@ -36,6 +38,12 @@ public class MainWindowActivity extends AppCompatActivity {
         if (extras != null) {
             id = extras.getString("id");
             fragment = extras.getString("fragment");
+
+            try {
+                clock = extras.getString("clockAlert");
+            } catch (Exception e) {
+                System.out.println("No value given");
+            }
         }
 
 
@@ -59,6 +67,11 @@ public class MainWindowActivity extends AppCompatActivity {
                 break;
             case "sleep":
                 bottomNavigationView.setSelectedItemId(R.id.nav_sleep);
+                if (clock != null) {
+                    bundle.putString("clockAlarm", "true");
+                } else {
+                    bundle.putString("clockAlarm", "false");
+                }
                 selectedFragment = new FragmentSleep();
                 break;
             case "statistics":
@@ -92,6 +105,11 @@ public class MainWindowActivity extends AppCompatActivity {
                         break;
                     case R.id.nav_sleep:
                         selectedFragment = new FragmentSleep();
+                        if (clock != null) {
+                            bundle.putString("clockAlarm", "true");
+                        } else {
+                            bundle.putString("clockAlarm", "false");
+                        }
                         break;
                     case R.id.nav_statistics:
                         selectedFragment = new FragmentStatistics();
